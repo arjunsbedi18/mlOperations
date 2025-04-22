@@ -23,13 +23,15 @@ class WineClassifierScoringFlow(FlowSpec):
     @step
     def predict(self):
         self.predictions = self.model.predict(self.test_data)
+        self.score_value = self.model.score(self.test_data, self.test_labels)
         self.next(self.end)
 
     @step
     def end(self):
         print('Results')
         print('Model', self.model)
-        print('Predictions')
+        print('Score', self.score_value)
+        print('First 5 Predictions')
         for i in range(5):
             print(self.test_labels[i], 'was predicted as ', self.predictions[i])
 

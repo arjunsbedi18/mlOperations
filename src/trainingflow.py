@@ -1,6 +1,7 @@
 from metaflow import FlowSpec, step, Parameter
 
 class ClassifierTrainFlow(FlowSpec):
+    
     n_neighbors = Parameter('n_neighbors', default=5, type=int)
     weights = Parameter('weights', default='uniform')
 
