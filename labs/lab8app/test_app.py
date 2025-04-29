@@ -4,14 +4,8 @@ import json
 # API endpoint
 url = "http://localhost:8000/predict"
 
-# Sample wine features (13 features)
-# These are example values for the wine dataset
-sample_data = {
-    "features": [
-        13.24, 2.59, 2.87, 21.0, 118.0, 2.8, 2.69, 
-        0.39, 1.82, 4.32, 1.04, 2.93, 735.0
-    ]
-}
+sample_data = {"features": [13.24, 2.59, 2.87, 21.0, 118.0, 2.8, 2.69, 
+        0.39, 1.82, 4.32, 1.04, 2.93, 735.0]}
 
 # Make POST request to the API
 try:
